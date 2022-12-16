@@ -1,0 +1,48 @@
+<%- include('partials/header') -%>
+
+<body>
+<h1 class="text-5xl font-bold">Opportunities</h1>
+    <div class="input-group">
+      <select class="select select-bordered bg-base-content">
+        <option disabled selected>Filter </option>
+       <button><a href="/about"> <option>Education</option></a></button>
+        <option>Environment</option>
+        <option>Health</option>
+        <option>Helping Neighbors in Need</option>
+        <option>Moving, lifting, and rearranging</option>
+        <option>Strengthening Communities</option>
+      </select>
+      <button class="btn gap-2">
+  ALL OPPORTUNITIES
+        <div class="badge"><%=arrayOfData.length %></div>
+      </button>
+      <button class="btn gap-2">
+       </button>
+       </div>
+    <% arrayOfData.forEach(data => { %>
+        <div class="card w-96  ">
+          <div class="card-body">
+            <form
+            class="col-1"
+            action="/like-event/<%= data.opportunity_id %>" 
+            method="GET"
+          >
+            <button class="btn btn-warning fa fa-bookmark" type="submit"></button>
+          </form>
+            <h2 class="card-title"> <em><%= %></h2>
+                <p class="card-title"> <em><%= data.recurrence_type %></p>
+                <div class="card-actions justify-end">
+   <p><%= data.borough %></p>
+            <h2>  <%=data.summary %></h2>
+<a href="<%= data.display_url %>"><%=data.category_desc %></a>
+                </div>
+          </div>
+        </div>
+      <% }) %>
+      <div class="btn-group">
+        <button class="btn">«</button>
+        <button class="btn">Page 22</button>
+        <button class="btn">»</button>
+      </div>
+  </body>
+</html>
