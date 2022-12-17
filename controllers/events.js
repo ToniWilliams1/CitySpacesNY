@@ -7,7 +7,7 @@ const User = require("../models/User");
     getEvents: async (req, res) => {
         const results = await fetch('https://data.cityofnewyork.us/resource/bquu-z2ht.json');
        const data = await results.json();
-        console.log(data[0].title);
+        console.log(data);
 
         res.render("../views/events.ejs", {arrayOfData: data})
       },

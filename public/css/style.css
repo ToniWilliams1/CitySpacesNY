@@ -2,20 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-
 .mainDiv{
     width: 100%;
  background-color: #fff;
  margin: 50px auto;
  border-radius: 3px;
  position: relative;
+ color: #735e59
 
 }
 .navbar{
   font-family: 'Nerko One', cursive;
-color: brown;
+color: #735e59
 }
 
 
@@ -33,6 +31,8 @@ color: brown;
   float: left;
   font-family: 'Nerko One', cursive;
   text-align: center;
+  color: #735e59
+
 
 }
 
@@ -43,6 +43,8 @@ color: brown;
   float: right;
   font-family: 'Nerko One', cursive;
 text-align: center;
+color: #735e59
+
 }
 
 .index{
@@ -369,6 +371,8 @@ label{
 
 .div.card.w-96.glass {
     display: table;
+    color: #735e59
+
 }
 
 .left{
@@ -590,6 +594,16 @@ color: green;
   margin-left: 10px;
 }
 
+p{
+  color: #735e59
+
+}
+.col-6 {
+  color: #735e59;
+  font-family: 'Nerko One', cursive;
+
+}
+
 .info .options {
   height: 10px;
   cursor: pointer;
@@ -720,18 +734,18 @@ color: green;
   margin-left: auto;
 }
 
+input{
+  font-family: 'Nerko One', cursive;
+
+}
 
 h1, .btn2{
     color: green;
     font-family: 'Nerko One', cursive;
     text-align: center;
 	font-size: 60px;
-	padding: 0;
-	margin: 0;
-	margin-left: 50%;
-	transform: translateX(-200%);
+	transform: translateX(-400%);
 	opacity: 0;
-    text-align: center;
 	animation: slide-in-anim 1.5s ease-out forwards;
 }
 

@@ -1,6 +1,4 @@
 <%- include('partials/header') -%>
-
-<body>
 <h1 class="text-5xl font-bold">Opportunities</h1>
     <div class="input-group">
       <select class="select select-bordered bg-base-content">
@@ -29,10 +27,12 @@
           >
             <button class="btn btn-warning fa fa-bookmark" type="submit"></button>
           </form>
-            <h2 class="card-title"> <em><%= %></h2>
+            <h2 class="card-title"> <em><%=  data.org_title%></h2>
                 <p class="card-title"> <em><%= data.recurrence_type %></p>
                 <div class="card-actions justify-end">
    <p><%= data.borough %></p>
+   <p><%= data.nta %></p>
+   <p> Community Board <%= data.community_board%></p>
             <h2>  <%=data.summary %></h2>
 <a href="<%= data.display_url %>"><%=data.category_desc %></a>
                 </div>
@@ -44,5 +44,3 @@
         <button class="btn">Page 22</button>
         <button class="btn">»</button>
       </div>
-  </body>
-</html>

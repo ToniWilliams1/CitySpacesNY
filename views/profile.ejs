@@ -1,35 +1,18 @@
 <%- include('partials/header') -%>
 <div class="left">
+  <h2  class="text-2xl font-bold">Welcome, <%=user.userName %>!</h2>
+  <p>Email Address: <%= user.email %></p>
+  <p><%= user.watching.length %> Saved Events</p>
   <div class="date">
-    Thursday, 8 December 2022
+    <input type="date"></input><br>
   </div>
   <div class="city">
-    New York City
   </div>
   <div class="tempreture">
-    27&deg;
   </div>
 </div>
-<div class="container">
-  <div class="row mt-5">
       <div class="col-6">
-        <div class="card">
-          <h2>Welcome, <%=user.userName %>!</h2>
-          <div class="cont">
-              <p>Email Address: <%= user.email %></p>
-                Saved Events: <%= user.watching.length %>
-                <div class="date">
-                  Thursday, 8 December 2022
-                </div>
-                <div class="city">
-                  New York City
-                </div>
-              </p> 
-          </div>
-      </div>      
-      </div>
-      <div class="col-6">
-        <h1 class="text-5xl font-bold">Saved Events   </h1>      <div class="badge"><%=user.watching.length %></div>
+        <h1 class="text-5xl font-bold"> <%=user.watching.length %> Saved Events   </h1>     
         <% user.watching.forEach(data => { %>
           <div class="card w-96  ">
             <div class="card-body">
@@ -49,7 +32,7 @@
         <ul class="row list-unstyled">
         </ul>
         <div class="row justify-content-center mt-5">
-          <a class="btn" href="/events">Add <i class="fa-solid fa-plus"></i> </a>
+          <a class="btn" href="/events">Add Event<i class="fa-solid fa-plus"></i> </a>
         </div>  
       </div>  
     </div>

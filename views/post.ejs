@@ -2,28 +2,58 @@
 <link href="https://cdn.jsdelivr.net/npm/daisyui@2.40.1/dist/full.css" rel="stylesheet" type="text/css" />
   <div class="container">
     <h1 class="text-5xl font-bold"><%= post.userName %>'s Post</h1>
+    <% for(var i=0; i<post.length; i++) {%>>
+      <div class="post">
+        <div class="info">
+          <div class="user">
+            <p class="username"><%=post.userName %></p>
+          </div>
+        </div>
+        <ul>
+        <li class="col-6 justify-content-between mt-5">
+        </li>
+        </ul>
+        <img src="<%= post.image%>" class="post-img" alt="View Full Post" /></a>
+        <div class="post-content">
+          <div class="reaction-wrapper">
+            <form>
+                <button class="btn btn-error fa fa-trash"></button>
+         </form>
+                <button class="btn btn-success fa fa-heart" type="submit"></button></a>
+          </div>
+          <%if(post.likes > 1)  {%>
+          <p class="likes"><%=post.likes %> likes</p>
+           <%}else {%>
+            <p class="likes"><%=post.likes %> like</p>
+            <% } %>
+          <p class="description"><span><%=posts.user %></span> Title: <%=post.title %></p>
+          <p class="description"><span> Caption: <%=post.caption %></span> </p>
+          <p class="post-time"><%=post.createdAt %></p>
+        </div>
+      </div>   
+      <% } %>
     <div class="row justify-content-center mt-5">
       <div class="col-6">
         <img class="post-img" src="<%= post.image%>" />
-        <div class="row justify-content-between">
-          <form class="col-1" action="/post/likePost/<%= post.id %>?_method=PUT" method="POST">
-            <button class="btn btn-success fa fa-heart" type="submit"></button>
+        <div class="post-content">
+          <div class="reaction-wrapper">
+            <form  action="/post/deletePost/<%= post.id %>?_method=DELETE" method="POST">
+                <button class="btn btn-error fa fa-trash"></button>
           </form>
+          <form action="/post/likePost/<%= post.id %>?_method=PUT" method="POST">
+                <button class="btn btn-success fa fa-heart" type="submit"></button></a>
+          </form>
+              </div>
           <%if(post.likes > 1)  {%>
-            <p class="likes"><%=post.likes %> likes</p>
-             <%}else {%>
-              <p class="likes"><%=post.likes %> like</p>
-              <% } %>
-          <%if(post.user==user.id){ %>
-            <form action="/post/deletePost/<%= post.id %>?_method=DELETE" method="POST" class="col-3">
-              <button class="btn btn-error fa fa-trash" type="submit"></button>
-            </form>
-            <%}%>
+          <p class="likes"><%=post.likes %> likes</p>
+           <%}else {%>
+            <p class="likes"><%=post.likes %> like</p>
+            <% } %>
             <p class="description">
-              Title <%= post.title %>
+              Title: <%= post.title %>
              </p>
              <p class="description">
-              Caption <%= post.caption %>
+              Caption: <%= post.caption %>
              </p>
              <p class="post-time"><%=post.createdAt %></p>
         </div>
@@ -32,7 +62,11 @@
       </div>
       <div class="container">
         <div class="row justify-content-center mt-5">
+          <h1>Comments</h1>
           <ul class="row list-unstyled">
+            <div class="col-md-6 text-left">
+              <span class="count_comment"><%=comment[i].length %></span>
+            </div>
             <% for(var i=0; i< comment.length; i++) {%>
               <% if (comment[i].deleted == false){ %>
               <li class="col-6 justify-content-between mt-5">
@@ -47,8 +81,13 @@
                       <input type="hidden" name="postid" value="<%= post.id %>">
                     </form>
                     <%}%>
-                  <h3 class="likes">Likes: <%= comment[i].likes %>
-                  </h3>
+                    <div class="reaction-wrapper">
+                    <%if(post.likes > 1)  {%>
+                      <h3 class="likes"><%=comment[i].likes %> likes</p>
+                       <%}else {%>
+                        <h3 class="likes"><%=comment[i].likes %> like</p>
+                        <% } %>
+                        </div>
               </li>
               <% } %>
               <% } %>
@@ -57,12 +96,17 @@
       </div>
 <!-- Comments Section -->
       
+
+
+
+
+
+
       <div class="mt-5">
-        <h2>Add a Comment</h2>
         <form action="/comments/createComment/<%= post.id %>" method="POST">
           <div class="mb-3">
             <label for="comment" class="form-label" ></label>
-            <input type="text" class="form-control" id="comment" name="comment" placeholder="Comment">
+            <input type="text" class="form-control" id="comment" name="comment" placeholder="Add a Comment...">
           </div>
           <button type="submit" class="btn btn-sucess"> Submit</button>
         </form>
