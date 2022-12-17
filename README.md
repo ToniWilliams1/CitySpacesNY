@@ -12,6 +12,7 @@ Tailwind CSS <br>
 ## Back end <br>
 Express.js <br>
 Cloudinary <br>
+Heroku <br>
 Mongo DB <br>
 Mongoose <br>
 Multer <br>
