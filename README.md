@@ -43,7 +43,7 @@ API_SECRET = your cloudinary api secret
 ## Start App
 NPM install
 
-Clone the repo git clone https://github.com/toniwilliams1/CitySpaces.git
+Clone the repo git clone https://github.com/toniwilliams1/CitySpacesNY.git
 
 NPM Start
 
