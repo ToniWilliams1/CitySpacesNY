@@ -38,11 +38,13 @@ PORT = 2121 (can be any port example: 3000)
 
 DB_STRING = your database URI
 
-CLOUD_NAME = your cloudinary cloud name
+CLOUD_NAME = your Cloudinary cloud name
 
-API_KEY = your cloudinary api key
+API_KEY = your Cloudinary API key
 
-API_SECRET = your cloudinary api secret
+API_SECRET = your Cloudinary API secret
+
+WEATHER API = your OpenWeather API Key
 
 ## Start App
 NPM install

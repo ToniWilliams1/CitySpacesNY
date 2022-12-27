@@ -2,6 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+
+.marquee {
+  height: 50px;
+  width: 1366px;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee div {
+  display: block;
+  width: 200%;
+  height: 70px;
+  position: absolute;
+  overflow: hidden;
+  -webkit-animation: marquee 15s linear infinite;
+          animation: marquee 15s linear infinite;
+}
+
+.marquee span {
+  float: left;
+  width: 30%;
+  color: #735e59;
+  font-family: 'Nerko One', cursive;
+  font-size: 20px;
+  padding-top:5px;
+  letter-spacing: 2px;
+}
+
+@-webkit-keyframes marquee {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -100%; }
+}
+
 .mainDiv{
     width: 100%;
  background-color: #fff;
@@ -785,6 +825,7 @@ p{
 .btn{
     color: green;
     font-family: 'Nerko One', cursive;
+    border: 1px solid green;
 
 }
 

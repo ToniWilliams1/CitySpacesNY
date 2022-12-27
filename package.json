@@ -1,13 +1,13 @@
 {
-  "name": "binary-upload-boom",
+  "name": "City Spaces NY",
   "version": "1.0.0",
-  "description": "100Devs Social Network",
+  "description": "Full stack web application where you can get information on volunteer opportunities around New York City, save opportunities you'd like to volunteer, and facilitate reflection discussions.",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Toni Williams",
   "license": "MIT",
   "dependencies": {
     "bcrypt": "^5.0.1",
@@ -23,7 +23,6 @@
     "express": "^4.18.2",
     "express-flash": "^0.0.2",
     "express-session": "^1.17.1",
-    "faker": "^6.6.6",
     "install": "^0.13.0",
     "method-override": "^3.0.0",
     "mongodb": "^3.6.5",
@@ -31,7 +30,6 @@
     "morgan": "^1.10.0",
     "multer": "^1.4.5-lts.1",
     "passport": "^0.6.0",
-    "passport-coinbase": "^0.1.4",
     "passport-local": "^1.0.0",
     "validator": "^13.6.0"
   },

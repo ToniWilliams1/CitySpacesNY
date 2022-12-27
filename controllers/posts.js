@@ -7,6 +7,7 @@ module.exports = {
 		try {
 			const posts = await Post.find({ user: req.user.id });
 			res.render("profile.ejs", { posts: posts, user: req.user });
+		console.log(req.user)
 		} catch (err) {
 			console.log(err);
 		}
@@ -23,6 +24,7 @@ module.exports = {
 		try {
 			const post = await Post.findById(req.params.id);
 			const comment = await Comment.find({ postid: req.params.id });
+			console.log(comment)
 			res.render("post.ejs", { post: post, user: req.user, comment: comment });
 		} catch (err) {
 			console.log(err);

@@ -62,19 +62,17 @@
       </div>
       <div class="container">
         <div class="row justify-content-center mt-5">
-          <h1>Comments</h1>
+          <%if(comment.length > 1)  {%>
+            <h1><%=comment.length %> comments</p>
+             <%}else {%>
+              <h3 class="likes"><%=comment.length %> comment</p>
+              <% } %>
           <ul class="row list-unstyled">
-            <div class="col-md-6 text-left">
-              <span class="count_comment"><%=comment[i].length %></span>
-            </div>
             <% for(var i=0; i< comment.length; i++) {%>
               <% if (comment[i].deleted == false){ %>
               <li class="col-6 justify-content-between mt-5">
                 <%= comment[i].comment %>
-                  <form class="col-1" action="/comment/likeComment/<%= comment[i]._id %>?_method=PUT" method="POST">
-                    <button class="btn btn-primary fa fa-heart" type="submit"></button>
-                    <input type="hidden" name="postid" value="<%= post.id %>">
-                  </form>
+  
                   <%if(post.user==user.id){ %>
                     <form action="/comments/deleteComment/<%= comment[i].id %>?_method=PUT" method="POST" class="col-3">
                       <button class="btn btn-error fa fa-trash" type="submit"></button>

@@ -1,3 +1,4 @@
+<%- include('weather') -%>
 <%- include('partials/header') -%>
 <div class="left">
   <h2  class="text-2xl font-bold">Welcome, <%=user.userName %>!</h2>
@@ -5,10 +6,6 @@
   <p><%= user.watching.length %> Saved Events</p>
   <div class="date">
     <input type="date"></input><br>
-  </div>
-  <div class="city">
-  </div>
-  <div class="tempreture">
   </div>
 </div>
       <div class="col-6">
@@ -23,7 +20,7 @@
               <button class="btn btn-error fa-solid fa-trash" type="submit"></button>
             </form>
               <h2 class="card-title"> <em><%= %></h2>
-                  <p class="card-title"> <em><%= user.watching.data %></p>
+                  <p class="card-title"> <em><%= data %></p>
                   <div class="card-actions justify-end">
                   </div>
             </div>

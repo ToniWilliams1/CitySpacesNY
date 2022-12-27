@@ -1,3 +1,4 @@
+<%- include('weather') -%>
 <%- include('partials/header') -%>
 <h1 class="text-5xl font-bold">Reflections</h1>
 <p>Welcome to the reflections feed! Thank you for volunteering your time a City Space. Share with the world what it was that you did and how you felt about it. 
@@ -29,7 +30,7 @@
                <a href="#">
                Photo/Video <i class="fa fa-picture-o" aria-hidden="true"></i></a>
              </div>
-             <button type="submit" class="btn btn-primary" value="Upload">Submit</button> 
+             <button type="submit" class="btn btn-success" value="Upload">Submit</button> 
              <div class="title">
               <a href="#">
          </a>
@@ -59,11 +60,11 @@
   <img src="<%= posts[i].image%>" class="post-img" alt="View Full Post" /></a>
   <div class="post-content">
     <div class="reaction-wrapper">
-          <button class="btn btn-error fa fa-trash"></button>
-    <button class="btn btn-success fa fa-heart" type="submit"></button></a>
+          <a href="/post/<%= posts[i]._id%>"><button class="btn">Join Discussion</button></a>
+        </div>
     </div>
-    <%if(posts[i].likes > 1)  {%>
-    <p class="likes"><%=posts[i].likes %> likes</p>
+    <%if(posts[i].likes = 0)  {%>
+    <p class="likes">Be The first to Like!</p>
      <%}else {%>
       <p class="likes"><%=posts[i].likes %> like</p>
       <% } %>
