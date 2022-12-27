@@ -1,6 +1,6 @@
 # City Spaces NY
  
-Give yourself a sense of purpose, while making New York City communities happy.
+City Spaces NY is committed to creating a thriving society. Give yourself a sense of purpose, while making New York City communities happy.
 
 # Key Technologies, Packages, and Gems
 
