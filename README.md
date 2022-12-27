@@ -18,6 +18,7 @@ Mongoose <br>
 Multer <br>
 Node.js <br>
 NYC Open Data API <br>
+Open Weather API <br>
 Passport <br>
 
 
@@ -27,6 +28,8 @@ Users will log in to the app where they can filter through 600+ volunteer opport
 Users can save the events they plan to attend, and mark the ones they've attended as "complete". <br>
 
 Once marked complete, the user can faciliate a reflection discussion about the project they completed. 
+
+Users can see the live weather conditions in New York City.
 
 ## Things To Add
 
@@ -50,7 +53,7 @@ NPM Start
 
 ## Optimizations
 
-This project is still in beta. New features include real time weather updates and ability to share opportunities via email.
+This project is still in beta. New features include the ability to share opportunities via email.
 
 ## [Demo](https://luxebar.netlify.app/)
 <img src="https://user-images.githubusercontent.com/100317017/204971083-44b43493-0ea7-457f-a6a0-a0b736904d5e.png">
