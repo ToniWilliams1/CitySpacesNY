@@ -29,7 +29,7 @@ Users can save the events they plan to attend, and mark the ones they've attende
 
 Once marked complete, the user can faciliate a reflection discussion about the project they completed. 
 
-Users can see the live weather conditions in New York City.
+Users can see the live weather conditions in New York City for outdoor service events.
 
 ## Things To Add
 
