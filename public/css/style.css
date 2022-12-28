@@ -274,6 +274,7 @@ background-color:#dddfe2;
 	margin:0 auto;
     display:
 }
+
 label{
   padding-bottom:10px;
   display:block;
@@ -382,6 +383,7 @@ label{
     background-color: white;
     background-repeat: no-repeat;
     background-position: 12px 11px;
+}
     
     &:hover {
       box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 2px 4px rgba(0, 0, 0, .25);
@@ -405,7 +407,7 @@ label{
       box-shadow: 0 -1px 0 rgba(0, 0, 0, .04), 0 1px 1px rgba(0, 0, 0, .25);
       cursor: not-allowed;
     }
-  }
+  
   
   
 
@@ -901,7 +903,7 @@ section {
 
 .card .cont .link i{
     font-size: 25px;
-    color: white
+    color: white;
     transition: all 0.2s ease;
 }
 
@@ -958,7 +960,7 @@ img{
   height: 100%  
 }
 .left .top_link a {
-    color: green
+    color: green;
     font-weight: 400;
 }
 .left .top_link{

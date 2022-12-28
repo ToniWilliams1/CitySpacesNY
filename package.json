@@ -1,5 +1,5 @@
 {
-  "name": "City Spaces NY",
+  "name": "CitySpacesNY",
   "version": "1.0.0",
   "description": "Full stack web application where you can get information on volunteer opportunities around New York City, save opportunities you'd like to volunteer, and facilitate reflection discussions.",
   "main": "server.js",
