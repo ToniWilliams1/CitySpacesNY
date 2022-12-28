@@ -5,9 +5,11 @@ City Spaces NY is committed to creating a thriving society. Give yourself a sens
 # Key Technologies, Packages, and Gems
 
 ## Front end <br>
-DaisyUI <br>
-JavaScript <br>
-Tailwind CSS <br>
+• DaisyUI <br>
+
+• JavaScript <br>
+
+• Tailwind CSS <br>
 
 ## Back end <br>
 • Express.js <br>
