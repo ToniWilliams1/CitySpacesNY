@@ -776,7 +776,7 @@ p{
 
 input{
   font-family: 'Nerko One', cursive;
-
+color: #735e59
 }
 
 h1, .btn2{
@@ -789,27 +789,28 @@ h1, .btn2{
 	animation: slide-in-anim 1.5s ease-out forwards;
 }
 
-.btn2{
-    font-size: 30px;
-    border: 2px solid black;
-}
 
 @keyframes slide-in-anim {
 	20% {
 		opacity: 0;
 	}
 	60% {
-		transform: translateX(-45%);
+		transform: translateX(1%);
 	}
 	75% {
-		transform: translateX(-52%);
+		transform: translateX(1%);
 	}
 	100% {
 		opacity: 1;
-		transform: translateX(-50%);
+		transform: translateX(1%);
 	}
 }
 
+
+.btn2{
+  font-size: 30px;
+  border: 2px solid black;
+}
 
 h2{
     font-family: 'Nerko One', cursive;
@@ -823,7 +824,7 @@ p{
 
 
 .btn{
-    color: green;
+    color: brown;
     font-family: 'Nerko One', cursive;
     border: 1px solid green;
 
@@ -863,7 +864,7 @@ section {
     float: left;
     display: grid;
     margin-right: 2%; 
-    font-family: 'Bodoni Moda', serif;
+    
 }
 
 .card{

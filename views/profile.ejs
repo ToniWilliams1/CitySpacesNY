@@ -2,14 +2,10 @@
 <%- include('partials/header') -%>
 <div class="left">
   <h2  class="text-2xl font-bold">Welcome, <%=user.userName %>!</h2>
-  <p>Email Address: <%= user.email %></p>
-  <p><%= user.watching.length %> Saved Events</p>
-  <div class="date">
-    <input type="date"></input><br>
-  </div>
+ 
 </div>
       <div class="col-6">
-        <h1 class="text-5xl font-bold"> <%=user.watching.length %> Saved Events   </h1>     
+        <h1 class="text-5xl font-bold"> <%=user.watching.length %> Saved Spaces  </h1>     
         <% user.watching.forEach(data => { %>
           <div class="card w-96  ">
             <div class="card-body">
@@ -29,7 +25,7 @@
         <ul class="row list-unstyled">
         </ul>
         <div class="row justify-content-center mt-5">
-          <a class="btn" href="/events">Add Event<i class="fa-solid fa-plus"></i> </a>
+          <a class="btn" href="/events">Add A SPACE <i class="fa-solid fa-plus"></i> </a>
         </div>  
       </div>  
     </div>

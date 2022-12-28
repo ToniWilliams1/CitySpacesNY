@@ -1,7 +1,7 @@
 <%- include('partials/header') -%>
 <link href="https://cdn.jsdelivr.net/npm/daisyui@2.40.1/dist/full.css" rel="stylesheet" type="text/css" />
   <div class="container">
-    <h1 class="text-5xl font-bold"><%= post.userName %>'s Post</h1>
+    <h1 class="text-5xl font-bold"><%= post.userName %>'s Reflection</h1>
     <% for(var i=0; i<post.length; i++) {%>>
       <div class="post">
         <div class="info">
@@ -50,10 +50,10 @@
             <p class="likes"><%=post.likes %> like</p>
             <% } %>
             <p class="description">
-              Title: <%= post.title %>
+              City Space: <%= post.title %>
              </p>
              <p class="description">
-              Caption: <%= post.caption %>
+              Reflection: <%= post.caption %>
              </p>
              <p class="post-time"><%=post.createdAt %></p>
         </div>
@@ -110,7 +110,7 @@
         </form>
       </div>
       <div class="col-6 mt-5">
-        <a class="btn btn-sucess" href="/feed"><i class="fa-solid fa-arrow-left"></i>  Return to Feed</a>
+        <a class="btn btn-sucess" href="/feed"><i class="fa-solid fa-arrow-left"></i>  Return to Reflections</a>
       </div>
     </div>
   </div>

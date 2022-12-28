@@ -1,7 +1,7 @@
 <%- include('weather') -%>
 <%- include('partials/header') -%>
 <h1 class="text-5xl font-bold">Reflections</h1>
-<p>Welcome to the reflections feed! Thank you for volunteering your time a City Space. Share with the world what it was that you did and how you felt about it. 
+<p>Welcome to the reflections feed! Thank you for volunteering your time a City Space. Start or join a thread to reflect on your most memorable events, things you've learned, and how a City Space impacted you. 
   What are your hopes for the future and how can you apply what you have learned in your life?</p>
   <div class="mainDiv">
     <!--title-->
@@ -17,10 +17,10 @@
         <div class="textarea">
           <form action="/post/createPost" enctype="multipart/form-data" method="POST">
             <div class="mb-3">
-                <input type="text" class="form-control" id="title" name="title" placeholder="Title">
+                <input type="text" class="form-control" id="title" name="title" placeholder="City Space">
             </div>
             <div class="mb-3">
-              <input type="text" class="form-control" id="caption" name="caption" placeholder="Caption"></textarea>
+              <input type="text" class="form-control" id="caption" name="caption" placeholder="Start Reflection"></textarea>
             </div>
              <div class="mb-3">
               <input type="file" class="form-control" id="imageUpload" name="file" placeholder="Image ">
@@ -60,7 +60,7 @@
   <img src="<%= posts[i].image%>" class="post-img" alt="View Full Post" /></a>
   <div class="post-content">
     <div class="reaction-wrapper">
-          <a href="/post/<%= posts[i]._id%>"><button class="btn">Join Discussion</button></a>
+          <a href="/post/<%= posts[i]._id%>"><button class="btn">Join Reflection Thread</button></a>
         </div>
     </div>
     <%if(posts[i].likes = 0)  {%>
@@ -68,8 +68,8 @@
      <%}else {%>
       <p class="likes"><%=posts[i].likes %> like</p>
       <% } %>
-    <p class="description"><span><%=posts[i].user %></span> Title: <%=posts[i].title %></p>
-    <p class="description"><span> Caption: <%=posts[i].caption %></span> </p>
+    <p class="description"><span><%=posts[i].user %> City Space: <%=posts[i].title %></soan></p>
+    <p class="description"><span> Reflection: <%=posts[i].caption %></span> </p>
     <p class="post-time"><%=posts[i].createdAt %></p>
   </div>
 </div>   
